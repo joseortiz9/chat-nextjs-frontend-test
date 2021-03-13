@@ -16,6 +16,7 @@ import {useRouter} from "next/router";
 import {fetchApi} from "../utils/api";
 import {useAuth} from "../contexts/auth";
 import {useInputValue} from "../hooks/useInputValue";
+import {generateTestUser} from "../utils/fakerGenerator";
 
 const LoginForm = () => {
     const router = useRouter();

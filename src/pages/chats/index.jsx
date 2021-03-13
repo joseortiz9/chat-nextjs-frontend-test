@@ -6,7 +6,7 @@ import {useConversation} from "../../contexts/conversation";
 import ChatDrawer from "../../components/drawer";
 import {NewChat, Profile, ContactInfo, SearchMsg} from "../../components/drawer-comps";
 import DeleteChatDialog from "../../components/chat-box/common/delete-dialog";
-import {Message} from "../../utils/fakerGenerator";
+import {generateDefaultChat, generateFakeData, Message} from "../../utils/fakerGenerator";
 
 const ChatsView = ({chats}) => {
     const { contactSelected, setContactSelected, openProfileDrawer, setOpenProfileDrawer,
