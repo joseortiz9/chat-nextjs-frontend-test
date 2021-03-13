@@ -29,7 +29,7 @@ const LoginForm = () => {
     const handleLogin = async (e) => {
         e.preventDefault();
         setLoading(true);
-        await fetchApi('http://localhost:3000/api/login', "POST", {username: userInput.value, password: passInput.value})
+        await fetchApi('https://chat-nextjs-frontend-test.vercel.app/api/login', "POST", {username: userInput.value, password: passInput.value})
             .then(res => {
                 res.json().then(msg => {
                     if (res.status > 400) {
