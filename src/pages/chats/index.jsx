@@ -76,7 +76,13 @@ const ChatsView = ({chats}) => {
 
 ChatsView.getInitialProps = async (ctx) => {
     //const url = baseConfig.rootDomain+'/api/chats';
-    const chats = await fetchApiAndData('https://chat-nextjs-frontend-test.vercel.app/api/chats', "GET");
+    let chats = ""//await fetchApiAndData('http://localhostasd:3000/api/chats', "GET");
+    if (chats === undefined || chats === null || chats === "") {
+        const fakeData = generateFakeData(15);
+        chats = {
+            data: (fakeData.length > 0) ? fakeData : generateDefaultChat()
+        }
+    }
     return {chats};
 }
 
